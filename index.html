@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            @font-face {
+                font-family: gotham;
+                src: url(gotham-bold-regular.ttf);
+                }
+            
+            a:link, a:visited {
+                background-color: black;
+                color: #aaaca9;
+                padding: 25px 25px;
+                width: 100%;
+                text-decoration: none;
+            }
+
+            a:hover, a:active {
+                height: 250px;
+                background-color: #aaaca9;
+                background-repeat: no-repeat;
+                background-position: center;
+                background-size: 250px;
+                color: black;
+                font-size: 25px;
+            }
+
+            body {
+                margin: 0;
+                font-family: gotham;
+                font-size: 24px;
+            }
+            .container {
+                display: grid;
+                grid-template-columns: 70px 1fr 70px;
+                grid-template-rows: 100px 1fr 100px;
+                grid-template-areas: 
+                "header header header"
+                "side1 big side2"
+                "footer footer footer";
+                height: 100vh;
+                width: 100%;
+                background-color:  #aaaca9;
+            }
+
+            .box-header {
+                grid-area: header;
+                background-color:  #aaaca9;
+                
+            }
+
+            .box-side1 {
+                grid-area: side1;
+                background-color:  #aaaca9;
+            }
+
+            .box-side2 {
+                grid-area: side2;
+                background-color:  #aaaca9;
+            }
+
+            .box-big {
+                grid-area: big;
+                background-color:  #aaaca9;
+                grid-gap: 5px 5px;
+                display: grid;
+                grid-template-columns: 300px 300px 300px;
+                grid-template-rows: 300px 300px;
+                grid-template-areas: "box1 box2 box3" "box4 box5 box6";
+                justify-content: center;
+                align-content: center;
+            }
+
+            .box-footer {
+                grid-area: footer;
+                background-color:  #aaaca9;
+            }
+
+            .box1 {
+                grid-area: box1;
+            }
+
+            .box1 a:hover {
+                background-image: url(iol-fugl.svg);
+            }
+
+            .box2 {
+                grid-area: box2;
+            }
+
+            .box2 a:hover {
+                background-image: url(iol-fugl.svg);
+            }
+
+            .box3 {
+                grid-area: box3;
+            }
+
+            .box3 a:hover {
+                background-image: url(iol-fugl.svg);
+            }
+
+            .box4 {
+                grid-area: box4;
+            }    
+
+            .box4 a:hover {
+                background-image: url(talerum.png);
+            }      
+
+            .box5 {
+                grid-area: box5;
+            }
+
+            .box5 a:hover {
+                background-image: url(taleboblen.png);
+            }
+
+            .box6 {
+                grid-area: box6;
+            }
+
+            .box6 a:hover {
+                background-image: url(iol-fugl.svg);
+            }
+
+            .box1, .box2, .box3, .box4, .box5, .box6 {
+                height: 100%;
+                width: 100%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                background-color: #aaaca9;
+                opacity: 80%;
+                border: solid 0px;
+            }
+
+        </style>
+    </head>
+<body>
+    <div class="container">
+        <div class="box-header"></div>
+        <div class="box-side1"></div>
+        <div class="box-big">
+            
+            <!--alternative anchor: <a href="URL" target="same-value-for-all-anchors">Text</a> 
+                alt: onclick-tag and use newwindow as well as the same target across all anchors instead of target-tag to make sure it opens in a new window; not a new tab -->
+
+            <div class="box1"><a href="javascript:void(0);" onclick="window.open('https://yahoo.com', 'monitor-2', 'toolbar=1'); return false;">Icelandic Online</a></div>
+            <div class="box2"><a href="javascript:void(0);" onclick="window.open('https://google.com', 'monitor-2', 'toolbar=1'); return false;">Faroese Online</a></div>
+            <div class="box3"><a href="javascript:void(0);" onclick="window.open('https://firstpage.com', 'monitor-2', 'toolbar=1'); return false;">Greenlandic Online</a></div>
+            <div class="box4"><a href="javascript:void(0);" onclick="window.open('https://duckduckgo.com', 'monitor-2', 'toolbar=1'); return false;">Talerum</a></div>
+            <div class="box5"><a href="javascript:void(0);" onclick="window.open('https://ruv.is', 'monitor-2', 'toolbar=1'); return false;">Taleboblen</a></div>
+            <div class="box6"><a href="javascript:void(0);" onclick="window.open('https://covid.is', 'monitor-2', 'toolbar=1'); return false;">No. 6</a></div>
+        </div>
+        <div class="box-side2"></div>
+        <div class="box-footer"></div>
+    </div>
+</body>
+</html>
